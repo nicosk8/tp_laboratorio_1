@@ -22,7 +22,7 @@
 // messagges
 #define MESSAGE_INSERT_OPTION "Ingrese una opcion: \n"
 #define MESSAGE_ERROR_INSERT_OPTION "Ingreso incorrectamente la opcion. Ingrese nuevamente: \n"
-#define MESSAGE_CORRECT_IN "Usuario ingresado exitosamente!"
+#define MESSAGE_CORRECT_IN "Usuario ingresado exitosamente!\n"
 #define MESSAGE_FULL_LIST "No hay espacio para agregar nuevos empleados. Puede eliminar o borrar empleado\n"
 #define MSG_GETSTRING_ERROR "Error, debe ingresar sólo letras.\n"
 #define MSG_NUMBER_ERROR "Error, debe ingresar sólo números.\n"

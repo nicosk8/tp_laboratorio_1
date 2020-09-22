@@ -35,7 +35,7 @@ int initEmployees(Employee listEmployees[], int size)
 	{
 			for(i = ZERO; i < size; i++)
 			{
-				listEmployees[i].isEmpty = 0;
+				listEmployees[i].isEmpty = 1;
 			}
 			ret = OK;
 	}
@@ -44,7 +44,7 @@ int initEmployees(Employee listEmployees[], int size)
 
 int printEmployees(Employee listEmployees[], int size)
 {
-
+	printf("********** SECCIÓN MOSTRAR EMPLEADOS **********\n");
 	int i;
 	int ret = ERROR;
 	if (listEmployees != NULL && size > ZERO)
@@ -58,54 +58,28 @@ int printEmployees(Employee listEmployees[], int size)
 			}
 		}
 	}
+	printf("********** FIN SECCIÓN MOSTRAR EMPLEADOS **********\n");
 	return ret;
-}
-/*
-void add(Employee listEmployees[], int size, int *id)
-{
-	char name[LENGTH],
-		 lastName[LENGTH];
-	float salary;
-	int sector;
-//		currentId = *id;
-	// verifico que haya espacio en la lista para poder agregar empleado
-	printf("********** SECCION AGREGAR EMPLEADOS **********\n");
-	if(getFreeIndex(listEmployees,size) != ERROR){
-		// obtengo los datos del nuevo empleado
-		getNewEmployeeData(name,lastName,&salary,&sector);
-		if(addEmployee(listEmployees,name,lastName,salary,sector,size,currentId) == OK)
-		{	//aumento el id
-			currentId++;
-			*id = currentId;
-			printf("%s",MESSAGE_CORRECT_IN);
-		}
-
-	}else
-	{ // no hay espacio
-		printf("%s",MESSAGE_FULL_LIST);
-	}
-	printf("********** FIN SECCION AGREGAR EMPLEADOS **********\n");
 }
 
 int getFreeIndex(Employee listEmployee[], int size)
 {
-
 	int index = -1, i;
 	for(i =0; i < size ; i++){
-		if(!listEmployee[i].isEmpty){
+		if(listEmployee[i].isEmpty == 1){
 			index = i;
 			break;
 		}
 	}
 	return index;
 }
-*/
+
 void getNewEmployeeData(char name[],char lastName[],float *salary,int *sector)
 {
 	printf("********** CARGAR DATOS PARA NUEVO EMPLEADO **********\n");
 	getString(name,"Ingrese el nombre:\n",MSG_GETSTRING_ERROR,RETRIES);
 	getString(lastName,"Ingrese el apellido:\n",MSG_GETSTRING_ERROR,RETRIES);
-	getSalary(salary,"Ingrese el salario ($ 00.00):\n", MSG_NUMBER_ERROR, RETRIES);
+	getSalary(salary,"Ingrese el salario ($00,00):\n", MSG_NUMBER_ERROR, RETRIES);
 	showSector();
 	getOption(sector, "Ingrese sector:\n", MESSAGE_ERROR_INSERT_OPTION,ADD,DELETE,RETRIES);
 	printf("********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********\n");
@@ -140,8 +114,55 @@ void showSector()
 	printf("2- Sector Sistemas.\n");
 	printf("3- Sector Administración.\n");}
 
+Employee NewEmployee(int id,char name[],char lastName[],float salary,int sector){
+	Employee employee;
+	employee.id = id;
+	strcpy(employee.name, name);
+	strcpy(employee.lastName, lastName);
+	employee.salary = salary;
+	employee.sector = sector;
+	employee.isEmpty = 0;
+	return employee;
+}
 
+int addEmployee(Employee listEmployees[], char name[],char lastName[],float salary,int sector,int size, int id,int freeIndex)
+{
+	int ret = ERROR;
+	Employee newEmployee;
+	if(listEmployees != NULL && size > 0 && id > 0 && name != NULL && lastName!= NULL && salary >0 && sector >0 && freeIndex != ERROR)
+	{   // creo el empleado, lo agrego a la lista y doy de baja el índice libre
+		newEmployee = NewEmployee(id,name,lastName,salary,sector);
+		listEmployees[freeIndex] = newEmployee;
+		listEmployees[freeIndex].isEmpty = 0;
+		ret = OK;
+	}
+	return ret;
+}
+void add(Employee listEmployees[], int size, int *id)
+{
+	char  name[LENGTH],
+		  lastName[LENGTH];
+	float salary;
+	int   sector,
+		  currentId = *id,
+		  freeIndex = getFreeIndex(listEmployees,size);
+	// verifico que haya espacio en la lista para poder agregar empleado
+	printf("********** SECCION AGREGAR EMPLEADOS **********\n");
+	if(freeIndex != ERROR){
+		// obtengo los datos del nuevo empleado
+		getNewEmployeeData(name,lastName,&salary,&sector);
+		if(addEmployee(listEmployees,name,lastName,salary,sector,size,currentId,freeIndex) == OK)
+		{	//aumento el id
+			currentId++;
+			*id = currentId;
+			printf("%s",MESSAGE_CORRECT_IN);
+		}
 
-
+	}else
+	{ // no hay espacio
+		printf("%s",MESSAGE_FULL_LIST);
+	}
+	printf("********** FIN SECCION AGREGAR EMPLEADOS **********\n");
+}
 
 

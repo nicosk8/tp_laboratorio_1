@@ -42,13 +42,6 @@ int printOptionMenu(int *pOption);
  * Param
  * Return
  * */
-
-//void add(Employee listEmployees[], int size, int *id);
-/*Brief
- * Param
- * Param
- * Return
- * */
 //int getFreeIndex(Employee listEmployee[], int size);
 /*Brief
  * Param
@@ -68,5 +61,22 @@ void showSector();
  * Return
  * */
 int getSalary(float *pResult, char *message, char *errorMessage,int retries);
-
+/*Brief
+ * Param
+ * Param
+ * Return
+ * */
+Employee NewEmployee(int id,char name[],char lastName[],float salary,int sector);
+/*Brief
+ * Param
+ * Param
+ * Return
+ * */
+int addEmployee(Employee listEmployees[], char name[],char lastName[],float salary,int sector,int size, int id,int freeIndex);
+/*Brief
+ * Param
+ * Param
+ * Return
+ * */
+void add(Employee listEmployees[], int size, int *id);
 #endif /* EMPLOYEES_H_ */
