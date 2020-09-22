@@ -21,18 +21,23 @@ int main(void) {
 	Employee listEmployees[QTY_EMPLOYEES];
 
 	initEmployees(listEmployees,QTY_EMPLOYEES);
-	printOptionMenu(&optionUser);
+
+	while(printOptionMenu(&optionUser) != ERROR){
 	switch (optionUser)
 		{
 			case ADD:
 				add(listEmployees,QTY_EMPLOYEES,&id);
 				printEmployees(listEmployees,QTY_EMPLOYEES);
 				break;
-			case MODIFY: break;
+			case MODIFY: printf("ENTRÉ AL MODIFY");
+						 break;
+
 			case DELETE: break;
 			case SHOW: break;
-			case EXIT: break;
+			case EXIT: printf("Usted salió");
+					   break;
+			default: printf("Usted ingresó una opción inválida, reintente.\n");
 		}
-
+	}
 	return 0;
 }
