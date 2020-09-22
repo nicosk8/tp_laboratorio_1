@@ -99,13 +99,13 @@ int getFreeIndex(Employee listEmployee[], int size)
 	}
 	return index;
 }
-
+*/
 void getNewEmployeeData(char name[],char lastName[],float *salary,int *sector)
 {
 	printf("********** CARGAR DATOS PARA NUEVO EMPLEADO **********\n");
 	getString(name,"Ingrese el nombre:\n",MSG_GETSTRING_ERROR,RETRIES);
 	getString(lastName,"Ingrese el apellido:\n",MSG_GETSTRING_ERROR,RETRIES);
-	getSalary(salary,"Ingrese el salario:\n", MSG_NUMBER_ERROR, RETRIES);
+	getSalary(salary,"Ingrese el salario ($ 00.00):\n", MSG_NUMBER_ERROR, RETRIES);
 	showSector();
 	getOption(sector, "Ingrese sector:\n", MESSAGE_ERROR_INSERT_OPTION,ADD,DELETE,RETRIES);
 	printf("********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********\n");
@@ -142,7 +142,6 @@ void showSector()
 
 
 
-*/
 
 
 

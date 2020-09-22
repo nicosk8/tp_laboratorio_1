@@ -18,18 +18,21 @@ int main(void) {
 	setbuf(stdout, NULL);
 	fflush(stdin);
 	int optionUser;
+	char name[LENGTH],
+		 lastName[LENGTH];
+	float salary;
+	int sector;
 //		id = 1;
-
 	Employee listEmployees[QTY_EMPLOYEES];
 
 	initEmployees(listEmployees,QTY_EMPLOYEES);
 //	printEmployees(listEmployees,QTY_EMPLOYEES);
-//	status = printOptionMenu(&optionUser);
 	printOptionMenu(&optionUser);
+
 	switch (optionUser)
 		{
 			case ADD:
-//				getNewEmployeeData(name,lastName,&salary,&sector);
+				getNewEmployeeData(name,lastName,&salary,&sector);
 				printf("Entré al ADD");
 				break;
 			case MODIFY: break;

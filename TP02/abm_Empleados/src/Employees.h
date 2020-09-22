@@ -55,18 +55,18 @@ int printOptionMenu(int *pOption);
  * Param
  * Return
  * */
-//void getNewEmployeeData(char name[],char lastName[],float *salary,int *sector);
+void getNewEmployeeData(char name[],char lastName[],float *salary,int *sector);
 /*Brief
  * Param
  * Param
  * Return
  * */
-//void showSector();
+void showSector();
 /*Brief
  * Param
  * Param
  * Return
  * */
-//int getSalary(float *pResult, char *message, char *errorMessage,int retries);
+int getSalary(float *pResult, char *message, char *errorMessage,int retries);
 
 #endif /* EMPLOYEES_H_ */
