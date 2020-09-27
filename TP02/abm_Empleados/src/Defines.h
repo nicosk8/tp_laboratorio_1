@@ -26,6 +26,9 @@
 #define MESSAGE_FULL_LIST "No hay espacio para agregar nuevos empleados. Puede eliminar o borrar empleado\n"
 #define MSG_GETSTRING_ERROR "Error, debe ingresar sólo letras.\n"
 #define MSG_NUMBER_ERROR "Error, debe ingresar sólo números.\n"
+#define MESSAGE_INSERT_ID "Ingrese el ID que desea modificar: \n"
+#define MESSAGE_ERROR_ID "Ingresó un ID inexistente, reingrese: \n"
+
 
 // menu
 #define ADD 1
@@ -33,7 +36,10 @@
 #define DELETE 3
 #define SHOW 4
 #define EXIT 5
-
+#define NAME 1
+#define LAST_NAME 2
+#define SECTOR 3
+#define SALARY 4
 // others
 #define  RETRIES      			3
 #endif /* DEFINES_H_ */

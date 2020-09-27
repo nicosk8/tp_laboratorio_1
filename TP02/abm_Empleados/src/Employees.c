@@ -61,6 +61,7 @@ int printEmployees(Employee listEmployees[], int size)
 	printf("********** FIN SECCIÓN MOSTRAR EMPLEADOS **********\n");
 	return ret;
 }
+/*********************** ADD SECTION TOP ****************************************************************/
 
 int getFreeIndex(Employee listEmployee[], int size)
 {
@@ -164,5 +165,127 @@ void add(Employee listEmployees[], int size, int *id)
 	}
 	printf("********** FIN SECCION AGREGAR EMPLEADOS **********\n");
 }
+/*********************** ADD SECTION BOTTOM ****************************************************************/
+/*********************** MODIFY SECTION TOP ****************************************************************/
+int isEmptyList(Employee listEmployee[], int size){
+	int isEmpty;
+	for(int i = 0; i<size; i++){
+		if(listEmployee[i].isEmpty == 1){
+			isEmpty = 1;
+		}else{
+			isEmpty = 0;
+		}
+	}
+	return isEmpty;
+}
+int findEmployeeById(Employee listEmployees[], int size, int id){
+	int index=-1,
+		i;
+	if (listEmployees != NULL && size > 0 && id > 0){
+		for(i = 0; i < size ; i++){
+			if(listEmployees[i].id == id)
+			{
+				index = i;
+				break;
+			}
+		}
+	}
+	return index;
+
+}
+
+int getModifyOption(){
+	int option;
+	printf("********** MENU MODIFICAR **********\n");
+	printf("1- Modificar Nombre\n");
+	printf("2- Modificar Apellido\n");
+	printf("3- Modificar Sueldo\n");
+	printf("4- Modificar Sector\n");
+	getOption(&option,MESSAGE_INSERT_OPTION,MESSAGE_ERROR_INSERT_OPTION,ADD,SHOW,RETRIES);
+	return option;
+}
+
+int modify(Employee listEmployees[], int size){
+	int id,
+		index,
+		sector;
+	char name[LENGTH],
+		 lastName[LENGTH];
+//		 optionUser = 's';
+	float salary;
+	printf("********** SECCION MODIFICAR EMPLEADOS **********\n");
+	printf("********** EMPLEADOS CARGADOS **********\n");
+	printEmployees(listEmployees,size);
+	if(isEmptyList(listEmployees,size) == 1){
+		printf("La lista de empleados esta vacia.\n");
+		printf("No se puede modificar elementos.\n");
+	}else{
+		// lógica principal del módulo
+			getNumber(&id,MESSAGE_INSERT_ID,MESSAGE_ERROR_ID,RETRIES);
+			index = findEmployeeById(listEmployees,size,id);
+			if(index != ERROR){
+				// si el empleado existe muestro los datos
+				printf("Los datos actuales del empleado son:\n");
+				printEmployees(listEmployees,size);
+//				do{
+					switch (getModifyOption()){
+
+					case NAME:
+						printf("**** Modificar nombre **** \n");
+						getString(name,"Ingrese el nuevo nombre: \n",MSG_GETSTRING_ERROR,RETRIES);
+						strcpy(listEmployees[index].name, name);
+						printf("**** Nombre Modificado ****\n");
+
+						break;
+					case LAST_NAME:
+						printf("**** Modificar apellido **** \n");
+						getString(name,"Ingrese el nuevo apellido: \n",MSG_GETSTRING_ERROR,RETRIES);
+						strcpy(listEmployees[index].lastName, lastName);
+						printf("**** Apellido Modificado ****\n");
+						break;
+					case SECTOR:
+						printf("**** Modificar sector **** \n");
+						showSector();
+						getOption(&sector, "Ingrese sector:\n", MESSAGE_ERROR_INSERT_OPTION,ADD,DELETE,RETRIES);
+						listEmployees[index].sector = sector;
+						printf("**** Sector Modificado ****\n");
+						break;
+					case SALARY:
+						printf("**** Modificar salario ****\n");
+						getSalary(&salary,"Ingrese el salario ($00,00):\n", MSG_NUMBER_ERROR, RETRIES);
+						listEmployees[index].salary = salary;
+						printf("** Salario Modificado **\n");
+						break;
+					}
+					printEmployees(listEmployees,size);
+//				}while(optionUser == 's');
+			}
+
+	}
+	printf("********** FIN SECCION MODIFICAR EMPLEADOS **********\n");
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

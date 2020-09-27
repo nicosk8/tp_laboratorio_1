@@ -79,4 +79,28 @@ int addEmployee(Employee listEmployees[], char name[],char lastName[],float sala
  * Return
  * */
 void add(Employee listEmployees[], int size, int *id);
+/*Brief
+ * Param
+ * Param
+ * Return
+ * */
+int isEmptyList(Employee listEmployee[], int size);
+/*Brief
+ * Param
+ * Param
+ * Return
+ * */
+int modify(Employee listEmployees[], int size);
+/*Brief
+ * Param
+ * Param
+ * Return
+ * */
+int findEmployeeById(Employee listEmployees[], int size, int id);
+/*Brief
+ * Param
+ * Param
+ * Return
+ * */
+int getModifyOption();
 #endif /* EMPLOYEES_H_ */

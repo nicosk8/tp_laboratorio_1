@@ -30,6 +30,7 @@ int main(void) {
 				printEmployees(listEmployees,QTY_EMPLOYEES);
 				break;
 			case MODIFY: printf("ENTRÉ AL MODIFY");
+						 modify(listEmployees,QTY_EMPLOYEES);
 						 break;
 
 			case DELETE: break;
