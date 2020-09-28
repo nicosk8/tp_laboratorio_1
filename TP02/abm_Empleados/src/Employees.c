@@ -143,22 +143,32 @@ void add(Employee listEmployees[], int size, int *id)
 {
 	char  name[LENGTH],
 		  lastName[LENGTH];
+//		  optionUser;
 	float salary;
 	int   sector,
 		  currentId = *id,
 		  freeIndex = getFreeIndex(listEmployees,size);
 	// verifico que haya espacio en la lista para poder agregar empleado
 	printf("********** SECCION AGREGAR EMPLEADOS **********\n");
-	if(freeIndex != ERROR){
-		// obtengo los datos del nuevo empleado
-		getNewEmployeeData(name,lastName,&salary,&sector);
-		if(addEmployee(listEmployees,name,lastName,salary,sector,size,currentId,freeIndex) == OK)
-		{	//aumento el id
-			currentId++;
-			*id = currentId;
-			printf("%s",MESSAGE_CORRECT_IN);
-		}
 
+	if(freeIndex != ERROR && freeIndex < size)
+	{
+//	do{
+			// obtengo los datos del nuevo empleado
+			getNewEmployeeData(name,lastName,&salary,&sector);
+			if(addEmployee(listEmployees,name,lastName,salary,sector,size,currentId,freeIndex) == OK)
+			{	//aumento el id
+				currentId++;
+				*id = currentId;
+				printf("%s",MESSAGE_CORRECT_IN);
+			}else
+			{ // no hay espacio
+				printf("%s",MESSAGE_FULL_LIST);
+			}
+			printEmployees(listEmployees,size);
+//			getCaracter(&optionUser, "Desea agregar otro empleado? Ingrese s o n: ", "ERROR: ingrese s o n\n ", 'n', 's', RETRIES);
+
+//	}while(freeIndex < size && optionUser == 's');
 	}else
 	{ // no hay espacio
 		printf("%s",MESSAGE_FULL_LIST);
@@ -168,11 +178,9 @@ void add(Employee listEmployees[], int size, int *id)
 /*********************** ADD SECTION BOTTOM ****************************************************************/
 /*********************** MODIFY SECTION TOP ****************************************************************/
 int isEmptyList(Employee listEmployee[], int size){
-	int isEmpty;
+	int isEmpty=1;
 	for(int i = 0; i<size; i++){
-		if(listEmployee[i].isEmpty == 1){
-			isEmpty = 1;
-		}else{
+		if(listEmployee[i].isEmpty != 1){
 			isEmpty = 0;
 		}
 	}
@@ -199,19 +207,20 @@ int getModifyOption(){
 	printf("********** MENU MODIFICAR **********\n");
 	printf("1- Modificar Nombre\n");
 	printf("2- Modificar Apellido\n");
-	printf("3- Modificar Sueldo\n");
-	printf("4- Modificar Sector\n");
+	printf("3- Modificar Sector\n");
+	printf("4- Modificar Sueldo\n");
 	getOption(&option,MESSAGE_INSERT_OPTION,MESSAGE_ERROR_INSERT_OPTION,ADD,SHOW,RETRIES);
 	return option;
 }
 
 int modify(Employee listEmployees[], int size){
-	int id,
-		index,
-		sector;
+	int  id,
+		 index,
+		 sector;
 	char name[LENGTH],
-		 lastName[LENGTH];
-//		 optionUser = 's';
+		 lastName[LENGTH],
+		 optionField='s',
+		 optionUser='s';
 	float salary;
 	printf("********** SECCION MODIFICAR EMPLEADOS **********\n");
 	printf("********** EMPLEADOS CARGADOS **********\n");
@@ -219,15 +228,17 @@ int modify(Employee listEmployees[], int size){
 	if(isEmptyList(listEmployees,size) == 1){
 		printf("La lista de empleados esta vacia.\n");
 		printf("No se puede modificar elementos.\n");
-	}else{
+	}else
+	{
 		// lógica principal del módulo
+		do{
 			getNumber(&id,MESSAGE_INSERT_ID,MESSAGE_ERROR_ID,RETRIES);
 			index = findEmployeeById(listEmployees,size,id);
 			if(index != ERROR){
 				// si el empleado existe muestro los datos
 				printf("Los datos actuales del empleado son:\n");
 				printEmployees(listEmployees,size);
-//				do{
+				do{
 					switch (getModifyOption()){
 
 					case NAME:
@@ -239,7 +250,7 @@ int modify(Employee listEmployees[], int size){
 						break;
 					case LAST_NAME:
 						printf("**** Modificar apellido **** \n");
-						getString(name,"Ingrese el nuevo apellido: \n",MSG_GETSTRING_ERROR,RETRIES);
+						getString(lastName,"Ingrese el nuevo apellido: \n",MSG_GETSTRING_ERROR,RETRIES);
 						strcpy(listEmployees[index].lastName, lastName);
 						printf("**** Apellido Modificado ****\n");
 						break;
@@ -258,9 +269,11 @@ int modify(Employee listEmployees[], int size){
 						break;
 					}
 					printEmployees(listEmployees,size);
-//				}while(optionUser == 's');
+					getCaracter(&optionField, "Desea modificar otro campo? Ingrese s o n: ", "ERROR: ingrese s o n\n ", 'n', 's', RETRIES);
+				}while(optionField == 's');
+				getCaracter(&optionUser, "Desea modificar otro empleado? Ingrese s o n: ", "ERROR: ingrese s o n\n ", 'n', 's', RETRIES);
 			}
-
+		}while(optionUser == 's');
 	}
 	printf("********** FIN SECCION MODIFICAR EMPLEADOS **********\n");
 	return 0;

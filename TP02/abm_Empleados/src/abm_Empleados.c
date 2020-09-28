@@ -27,14 +27,16 @@ int main(void) {
 		{
 			case ADD:
 				add(listEmployees,QTY_EMPLOYEES,&id);
-				printEmployees(listEmployees,QTY_EMPLOYEES);
+//				printEmployees(listEmployees,QTY_EMPLOYEES);
 				break;
 			case MODIFY: printf("ENTRÉ AL MODIFY");
 						 modify(listEmployees,QTY_EMPLOYEES);
 						 break;
 
 			case DELETE: break;
-			case SHOW: break;
+			case SHOW:
+				printEmployees(listEmployees,QTY_EMPLOYEES);
+				break;
 			case EXIT: printf("Usted salió");
 					   break;
 			default: printf("Usted ingresó una opción inválida, reintente.\n");

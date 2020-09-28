@@ -41,4 +41,6 @@ int getNumber(int *pResult, char *message, char *errorMessage,
 
 int getFloat(float *pResult);
 int getString(char* pResult, char* message,char* errorMessage,int retries);
+int getCaracter(char *pResult, char *message, char *errorMessage, char minimun,char maximun, int retries);
+
 #endif /* UTN_H_ */

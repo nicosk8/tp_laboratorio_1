@@ -1,0 +1,239 @@
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Nicole
+Ingrese el apellido:
+Heck
+Ingrese el salario ($00,00):
+14,50
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+2
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Milton
+Ingrese el apellido:
+Soria
+Ingrese el salario ($00,00):
+14,60
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+3
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Anita
+Ingrese el apellido:
+Villar
+Ingrese el salario ($00,00):
+506,72
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+1
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+isEmpty: 0 	Id: 3 	Nombre: Anita 	Apellido: Villar 	Sueldo: 506.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+No hay espacio para agregar nuevos empleados. Puede eliminar o borrar empleado
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+2
+ENTRÉ AL MODIFY********** SECCION MODIFICAR EMPLEADOS **********
+********** EMPLEADOS CARGADOS **********
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+isEmpty: 0 	Id: 3 	Nombre: Anita 	Apellido: Villar 	Sueldo: 506.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Ingrese el ID que desea modificar: 
+2
+Los datos actuales del empleado son:
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+isEmpty: 0 	Id: 3 	Nombre: Anita 	Apellido: Villar 	Sueldo: 506.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** MENU MODIFICAR **********
+1- Modificar Nombre
+2- Modificar Apellido
+3- Modificar Sector
+4- Modificar Sueldo
+Ingrese una opcion: 
+1
+**** Modificar nombre **** 
+Ingrese el nuevo nombre: 
+Milton Lautaro
+**** Nombre Modificado ****
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton Lautaro 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+isEmpty: 0 	Id: 3 	Nombre: Anita 	Apellido: Villar 	Sueldo: 506.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea modificar otro campo? Ingrese s o n: n
+Desea modificar otro empleado? Ingrese s o n: s
+Ingrese el ID que desea modificar: 
+1
+Los datos actuales del empleado son:
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton Lautaro 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+isEmpty: 0 	Id: 3 	Nombre: Anita 	Apellido: Villar 	Sueldo: 506.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** MENU MODIFICAR **********
+1- Modificar Nombre
+2- Modificar Apellido
+3- Modificar Sector
+4- Modificar Sueldo
+Ingrese una opcion: 
+1
+**** Modificar nombre **** 
+Ingrese el nuevo nombre: 
+Nicole Denise 
+**** Nombre Modificado ****
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole Denise  	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton Lautaro 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+isEmpty: 0 	Id: 3 	Nombre: Anita 	Apellido: Villar 	Sueldo: 506.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea modificar otro campo? Ingrese s o n: s
+********** MENU MODIFICAR **********
+1- Modificar Nombre
+2- Modificar Apellido
+3- Modificar Sector
+4- Modificar Sueldo
+Ingrese una opcion: 
+3
+**** Modificar sector **** 
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+2
+**** Sector Modificado ****
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole Denise  	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton Lautaro 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+isEmpty: 0 	Id: 3 	Nombre: Anita 	Apellido: Villar 	Sueldo: 506.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea modificar otro campo? Ingrese s o n: s
+********** MENU MODIFICAR **********
+1- Modificar Nombre
+2- Modificar Apellido
+3- Modificar Sector
+4- Modificar Sueldo
+Ingrese una opcion: 
+4
+**** Modificar salario ****
+Ingrese el salario ($00,00):
+5000,74
+** Salario Modificado **
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole Denise  	Apellido: Heck 	Sueldo: 5000.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton Lautaro 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+isEmpty: 0 	Id: 3 	Nombre: Anita 	Apellido: Villar 	Sueldo: 506.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea modificar otro campo? Ingrese s o n: n
+Desea modificar otro empleado? Ingrese s o n: n
+********** FIN SECCION MODIFICAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+4
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole Denise  	Apellido: Heck 	Sueldo: 5000.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Milton Lautaro 	Apellido: Soria 	Sueldo: 14.00 	Sector: 3
+isEmpty: 0 	Id: 3 	Nombre: Anita 	Apellido: Villar 	Sueldo: 506.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+No hay espacio para agregar nuevos empleados. Puede eliminar o borrar empleado
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 

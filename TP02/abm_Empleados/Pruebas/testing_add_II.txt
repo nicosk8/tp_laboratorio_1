@@ -1,0 +1,164 @@
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Nicole
+Ingrese el apellido:
+Heck
+Ingrese el salario ($00,00):
+14,50
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+2
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea agregar otro empleado? Ingrese s o n: n
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+2
+ENTRÉ AL MODIFY********** SECCION MODIFICAR EMPLEADOS **********
+********** EMPLEADOS CARGADOS **********
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Ingrese el ID que desea modificar: 
+1
+Los datos actuales del empleado son:
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 14.00 	Sector: 2
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** MENU MODIFICAR **********
+1- Modificar Nombre
+2- Modificar Apellido
+3- Modificar Sector
+4- Modificar Sueldo
+Ingrese una opcion: 
+4
+**** Modificar salario ****
+Ingrese el salario ($00,00):
+1500,50
+** Salario Modificado **
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole 	Apellido: Heck 	Sueldo: 1500.00 	Sector: 2
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea modificar otro campo? Ingrese s o n: s
+********** MENU MODIFICAR **********
+1- Modificar Nombre
+2- Modificar Apellido
+3- Modificar Sector
+4- Modificar Sueldo
+Ingrese una opcion: 
+1
+**** Modificar nombre **** 
+Ingrese el nuevo nombre: 
+Nicole D.
+Error, debe ingresar sólo letras.
+Ingrese el nuevo nombre: 
+Nicole D
+**** Nombre Modificado ****
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole D 	Apellido: Heck 	Sueldo: 1500.00 	Sector: 2
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea modificar otro campo? Ingrese s o n: n
+Desea modificar otro empleado? Ingrese s o n: n
+********** FIN SECCION MODIFICAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Lauty
+Ingrese el apellido:
+Soria
+Ingrese el salario ($00,00):
+45,80
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+1
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole D 	Apellido: Heck 	Sueldo: 1500.00 	Sector: 2
+isEmpty: 0 	Id: 2 	Nombre: Lauty 	Apellido: Soria 	Sueldo: 45.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea agregar otro empleado? Ingrese s o n: s
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Tony
+Ingrese el apellido:
+Hawk
+Ingrese el salario ($00,00):
+65,51
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+3
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole D 	Apellido: Heck 	Sueldo: 1500.00 	Sector: 2
+isEmpty: 0 	Id: 3 	Nombre: Tony 	Apellido: Hawk 	Sueldo: 65.00 	Sector: 3
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea agregar otro empleado? Ingrese s o n: s
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Leticia
+Ingrese el apellido:
+Bufoni
+Ingrese el salario ($00,00):
+40,50
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+1
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+isEmpty: 0 	Id: 1 	Nombre: Nicole D 	Apellido: Heck 	Sueldo: 1500.00 	Sector: 2
+isEmpty: 0 	Id: 4 	Nombre: Leticia 	Apellido: Bufoni 	Sueldo: 40.00 	Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+Desea agregar otro empleado? Ingrese s o n: n
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:

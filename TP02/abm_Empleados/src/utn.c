@@ -156,4 +156,25 @@ int getString(char* pResult, char* message,char* errorMessage,int retries){
 	return retorno;
 }
 
+int getCaracter(char *pResult, char *message, char *errorMessage, char minimun,
+		char maximun, int retries) {
+	int retorno = -1;
+	char buffer;
+	if (pResult != NULL && message != NULL && errorMessage != NULL && minimun <= maximun && retries >= 0) {
+		do {
+			printf("%s", message);
+			fflush(stdin);
+			scanf("%c", &buffer);
+			if (buffer >= minimun && buffer <= maximun) {
+				*pResult = buffer;
+				retorno = 0;
+				break;
+			}
+			printf("%s", errorMessage);
+			retries--;
+		} while (retries >= 0);
+
+	}
+	return retorno;
+}
 
