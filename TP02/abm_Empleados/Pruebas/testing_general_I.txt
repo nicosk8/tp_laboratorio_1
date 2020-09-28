@@ -1,3 +1,7 @@
+Se altero la logica del modulo modify() para que sea iterativa y 
+el usuario decida cuando romper el ciclo: 
+
+
 ********** MENU PRINCIPAL **********
 1- Altas de nuevos empleados
 2- Modificar empleados
