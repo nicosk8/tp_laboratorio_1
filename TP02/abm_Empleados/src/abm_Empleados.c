@@ -27,13 +27,13 @@ int main(void) {
 		{
 			case ADD:
 				add(listEmployees,QTY_EMPLOYEES,&id);
-//				printEmployees(listEmployees,QTY_EMPLOYEES);
 				break;
-			case MODIFY: printf("ENTRÉ AL MODIFY");
-						 modify(listEmployees,QTY_EMPLOYEES);
-						 break;
-
-			case DELETE: break;
+			case MODIFY:
+				modify(listEmployees,QTY_EMPLOYEES);
+				break;
+			case DELETE:
+				delete(listEmployees,QTY_EMPLOYEES);
+				break;
 			case SHOW:
 				printEmployees(listEmployees,QTY_EMPLOYEES);
 				break;

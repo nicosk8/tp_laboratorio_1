@@ -30,6 +30,12 @@ int initEmployees(Employee listEmployees[], int size);
  * Param
  * Return
  * */
+void printEmployee(Employee employee);
+/*Brief
+ * Param
+ * Param
+ * Return
+ * */
 int printEmployees(Employee listEmployees[], int size);
 /*Brief
  * Param
@@ -103,4 +109,12 @@ int findEmployeeById(Employee listEmployees[], int size, int id);
  * Return
  * */
 int getModifyOption();
+/*Brief
+ * Param
+ * Param
+ * Return
+ * */
+Employee getEmployeeById(Employee listEmployee[], int size,int id);
+int deleteEmployee(Employee listEmployees[], int size,int id);
+void delete(Employee listEmployees[], int size);
 #endif /* EMPLOYEES_H_ */

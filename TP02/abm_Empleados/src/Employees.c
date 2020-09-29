@@ -42,6 +42,10 @@ int initEmployees(Employee listEmployees[], int size)
 	return ret;
 }
 
+void printEmployee(Employee employee){
+	printf("ID: %d - Nombre: %s - Apellido: %s - Sueldo: %f - Sector: %d\n",employee.id, employee.name, employee.lastName, employee.salary, employee.sector);
+}
+
 int printEmployees(Employee listEmployees[], int size)
 {
 	printf("********** SECCIÓN MOSTRAR EMPLEADOS **********\n");
@@ -53,7 +57,7 @@ int printEmployees(Employee listEmployees[], int size)
 		{
 			if(!listEmployees[i].isEmpty)
 			{
-				printf("isEmpty: %d \tId: %d \tNombre: %s \tApellido: %s \tSueldo: %.2f \tSector: %d\n",listEmployees[i].isEmpty,listEmployees[i].id, listEmployees[i].name, listEmployees[i].lastName, listEmployees[i].salary, listEmployees[i].sector);
+				printEmployee(listEmployees[i]);
 				ret = OK;
 			}
 		}
@@ -279,6 +283,74 @@ int modify(Employee listEmployees[], int size){
 	return 0;
 }
 
+Employee getEmployeeById(Employee listEmployee[], int size,int id){
+	Employee employee;
+	for(int i = 0; i<size; i++){
+		if(listEmployee[i].id == id && listEmployee[i].isEmpty == 0){
+			employee = listEmployee[i];
+			break;
+		}
+	}
+	return employee;
+}
+
+int deleteEmployee(Employee listEmployees[], int size,int id){
+	int ret = ERROR;
+	int indexToDelete;
+	if(listEmployees != NULL && size > 0 && id >0 ){
+		indexToDelete = findEmployeeById(listEmployees, size, id);
+		if(indexToDelete != ERROR){
+			listEmployees[indexToDelete].isEmpty = 1;
+			ret = OK;
+		}
+	}
+	return ret;
+}
+
+void delete(Employee listEmployees[], int size){
+	    int  id,
+			 index;
+//			 sector;
+		char //name[LENGTH],
+//			 lastName[LENGTH],
+			  optionUser='s';
+//		float salary;
+		Employee employeeToDelete;
+
+		if(isEmptyList(listEmployees,size) == 1){
+			printf("La lista de empleados esta vacia.\n");
+			printf("No se puede modificar elementos.\n");
+		}else
+		{
+			// lógica principal del módulo
+			do{
+				getNumber(&id,MESSAGE_INSERT_ID,MESSAGE_ERROR_ID,RETRIES);
+				index = findEmployeeById(listEmployees,size,id);
+				if(index != ERROR){
+					// si el empleado existe muestro los datos
+					employeeToDelete = getEmployeeById(listEmployees,size,id);
+					printf("Empleado a eliminar:\n");
+					printEmployee(employeeToDelete);
+					getCaracter(&optionUser, "Está seguro que desea eliminar al empleado? Ingrese s o n: ", "ERROR: ingrese s o n\n ", 'n', 's', RETRIES);
+					if (optionUser == 's'){
+						deleteEmployee(listEmployees,size,id);
+						printf("*** Se ha eliminado el empleado exitosamente!***");
+						getCaracter(&optionUser, "Desea eliminar otro id? Ingrese s o n: ", "ERROR: ingrese s o n\n ", 'n', 's', RETRIES);
+					}else
+					{
+						printf("***Operación cancelada***\n");
+						getCaracter(&optionUser, "Desea eliminar otro id? Ingrese s o n: ", "ERROR: ingrese s o n\n ", 'n', 's', RETRIES);
+					}
+				}else
+				{
+					printf("El id que desea encontrar no existe.\n");
+					getCaracter(&optionUser, "Desea eliminar otro empleado? Ingrese s o n: ", "ERROR: ingrese s o n\n ", 'n', 's', RETRIES);
+				}
+			}while(optionUser == 's');
+
+		}
+		printf("********** FIN SECCION MODIFICAR EMPLEADOS **********\n");
+}
 
 
 
