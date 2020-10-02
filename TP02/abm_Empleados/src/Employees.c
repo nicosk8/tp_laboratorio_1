@@ -411,7 +411,7 @@ float getTotalSalary(Employee listEmployees[], int size)
 {
 	int i;
 	float totalSalary = 0;
-	if(isEmptyList(listEmployees,size))
+	if(!isEmptyList(listEmployees,size))
 	{
 		for(i=0;i<size;i++)
 		{
@@ -428,7 +428,7 @@ int getCountEmployees(Employee listEmployees[], int size)
 {
 	int	i,
 	    count = 0;
-	if(isEmptyList(listEmployees,size))
+	if(!isEmptyList(listEmployees,size))
 		{
 			for(i=0;i<size;i++)
 			{

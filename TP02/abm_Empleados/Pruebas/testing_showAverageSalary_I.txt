@@ -1,0 +1,123 @@
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Nicole
+Ingrese el apellido:
+Heck
+Ingrese el salario ($00,00):
+6500,40
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+2
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+ID: 1 - Nombre: Nicole - Apellido: Heck - Sueldo: 6500.000000 - Sector: 2
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Lauty
+Ingrese el apellido:
+Soria
+Ingrese el salario ($00,00):
+1500,89
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+3
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+ID: 1 - Nombre: Nicole - Apellido: Heck - Sueldo: 6500.000000 - Sector: 2
+ID: 2 - Nombre: Lauty - Apellido: Soria - Sueldo: 1500.000000 - Sector: 3
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+1
+********** SECCION AGREGAR EMPLEADOS **********
+********** CARGAR DATOS PARA NUEVO EMPLEADO **********
+Ingrese el nombre:
+Anita
+Ingrese el apellido:
+Villar
+Ingrese el salario ($00,00):
+600,20
+1- Sector RRHH.
+2- Sector Sistemas.
+3- Sector Administración.
+Ingrese sector:
+1
+********** FIN CARGAR DATOS PARA NUEVO EMPLEADO **********
+Usuario ingresado exitosamente!
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+ID: 1 - Nombre: Nicole - Apellido: Heck - Sueldo: 6500.000000 - Sector: 2
+ID: 2 - Nombre: Lauty - Apellido: Soria - Sueldo: 1500.000000 - Sector: 3
+ID: 3 - Nombre: Anita - Apellido: Villar - Sueldo: 600.000000 - Sector: 1
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** FIN SECCION AGREGAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+4
+********** SECCION INFORMES **********
+********** MENU REPORTES **********
+1- Listado de los empleados ordenados alfabeticamente por Apellido y Sector.
+2- Total y promedio de los salarios y cuantos empleados superan el salario promedio.
+Ingrese una opcion: 
+2
+********** Listado total salarios, promedio salarios y cantidad de empleados superior al salario**********
+Total salarios: 8600.000000
+Promedio salarios: 2866.666748 
+Cantidad de empleados que superan el salario promedio: 1
+********** MENU REPORTES **********
+1- Listado de los empleados ordenados alfabeticamente por Apellido y Sector.
+2- Total y promedio de los salarios y cuantos empleados superan el salario promedio.
+Ingrese una opcion: 
+1
+********** Listado ordenado por apellido**********
+Ingrese opción de ordenamiento: 0-Descendente 1-Ascendente0
+Listado ordenado por apellido descendente
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+ID: 3 - Nombre: Anita - Apellido: Villar - Sueldo: 600.000000 - Sector: 1
+ID: 2 - Nombre: Lauty - Apellido: Soria - Sueldo: 1500.000000 - Sector: 3
+ID: 1 - Nombre: Nicole - Apellido: Heck - Sueldo: 6500.000000 - Sector: 2
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+********** MENU REPORTES **********
+1- Listado de los empleados ordenados alfabeticamente por Apellido y Sector.
+2- Total y promedio de los salarios y cuantos empleados superan el salario promedio.
+Ingrese una opcion: 
