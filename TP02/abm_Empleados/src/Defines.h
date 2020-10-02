@@ -8,7 +8,7 @@
 #ifndef DEFINES_H_
 #define DEFINES_H_
 // arrays
-#define QTY_EMPLOYEES 3
+#define QTY_EMPLOYEES 1000
 #define SIZE_BUFFER  5000
 #define LENGTH        51
 // control
