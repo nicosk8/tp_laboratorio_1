@@ -117,4 +117,10 @@ int getModifyOption();
 Employee getEmployeeById(Employee listEmployee[], int size,int id);
 int deleteEmployee(Employee listEmployees[], int size,int id);
 void delete(Employee listEmployees[], int size);
+int sortEmployee(Employee listEmployee[], int size,int order);
+float getTotalSalary(Employee listEmployees[], int size);
+int getCountEmployees(Employee listEmployees[], int size);
+float getAverageSalary(int countEmployees, float totalSalary);
+float getEmployeeWithMaxSalary(Employee listEmployees[], int size, float averageSalary);
+
 #endif /* EMPLOYEES_H_ */

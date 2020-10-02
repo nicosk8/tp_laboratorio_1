@@ -352,13 +352,118 @@ void delete(Employee listEmployees[], int size){
 		printf("********** FIN SECCION MODIFICAR EMPLEADOS **********\n");
 }
 
+int sortEmployee(Employee listEmployees[], int size,int order){
+	int flagSwap;
+	int i;
+	int counter;
+	int retorno = -1;
+	Employee buffer;
+	if (listEmployees != NULL && size >= 0){
+		do{
+			flagSwap = 0;
+			for(i=0 ; i< size - 1; i++){
+				counter++;
+				if(listEmployees[i].isEmpty == 0 && strncmp(listEmployees[i].lastName, listEmployees[i + 1].lastName,LENGTH) > 0 && order)
+				{	//ordeno ascendente z - a
+					flagSwap = 1;
+					buffer = listEmployees[i];
+					listEmployees[i] = listEmployees[i + 1];
+					listEmployees[i + 1] = buffer;
+				}else if(listEmployees[i].isEmpty == 0 && strncmp(listEmployees[i].lastName, listEmployees[i + 1].lastName,LENGTH) < 0 && !order)
+				{	//ordeno descendente z - a
+					flagSwap = 1;
+					buffer = listEmployees[i];
+					listEmployees[i] = listEmployees[i + 1];
+					listEmployees[i + 1] = buffer;
+				 }else if(listEmployees[i].isEmpty == 0 && strncmp(listEmployees[i].lastName, listEmployees[i + 1].lastName,LENGTH) == 0)
+				 {
+					 //Si los apellidos son iguales, ordeno por sector
+					 if(listEmployees[i].sector > listEmployees[i+1].sector && order && listEmployees[i].isEmpty == 0)
+					 {
+						 //de mayor a menor y criteria =0 descendente
+						 //descendente z - a
+						 //los apellidos son igules, verificar el sector(ascendente)
+						 //si esta 3 -1; necesito que sea 1 - 3
+						 flagSwap = 1;
+						 buffer = listEmployees[i];
+						 listEmployees[i] = listEmployees[i + 1];
+						 listEmployees[i + 1] = buffer;
+					 }else if(listEmployees[i].sector < listEmployees[i+1].sector && !order  && listEmployees[i].isEmpty == 0){
+						//de mayor a menor y criteria =0 descendente
+						//descendente z - a
+						//los apellidos son igules, verificar el sector
+						//si esta 1 - 3; necesito que sea 3 - 1
+						flagSwap = 1;
+						buffer = listEmployees[i];
+						listEmployees[i] = listEmployees[i + 1];
+						listEmployees[i + 1] = buffer;
+						}
+				 }
+			}
+			size--;
+		}while(flagSwap);
+		retorno = counter;
+	}
+	return retorno;
+}
 
+float getTotalSalary(Employee listEmployees[], int size)
+{
+	int i;
+	float totalSalary = 0;
+	if(isEmptyList(listEmployees,size))
+	{
+		for(i=0;i<size;i++)
+		{
+			if(listEmployees[i].isEmpty == ZERO)
+			{
+				totalSalary = totalSalary + listEmployees[i].salary;
+			}
+		}
+	}
+	return totalSalary;
+}
 
+int getCountEmployees(Employee listEmployees[], int size)
+{
+	int	i,
+	    count = 0;
+	if(isEmptyList(listEmployees,size))
+		{
+			for(i=0;i<size;i++)
+			{
+				if(listEmployees[i].isEmpty == ZERO)
+				{
+					count++;
+				}
+			}
+		}
+		return count;
+}
 
+float getAverageSalary(int countEmployees, float totalSalary){
+	return totalSalary/countEmployees;
+}
 
-
-
-
+float getEmployeeWithMaxSalary(Employee listEmployees[], int size, float averageSalary)
+{
+	int i,
+		employees = 0;
+	if(!isEmptyList(listEmployees,size))
+	{
+		for (i=0; i<size ;i++)
+		{
+			if(listEmployees[i].isEmpty == ZERO && listEmployees[i].salary > averageSalary)
+			{
+				employees++;
+			}
+		}
+	}else
+	{
+		employees = -1;
+	}
+	return employees;
+}
 
 
 

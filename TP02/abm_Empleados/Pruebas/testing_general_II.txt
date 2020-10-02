@@ -1,0 +1,48 @@
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+2
+********** SECCION MODIFICAR EMPLEADOS **********
+********** EMPLEADOS CARGADOS **********
+********** SECCIÓN MOSTRAR EMPLEADOS **********
+********** FIN SECCIÓN MOSTRAR EMPLEADOS **********
+La lista de empleados esta vacia.
+No se puede modificar elementos.
+********** FIN SECCION MODIFICAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+3
+La lista de empleados esta vacia.
+No se puede modificar elementos.
+********** FIN SECCION MODIFICAR EMPLEADOS **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+4
+********** SECCION INFORMES **********
+********** MENU PRINCIPAL **********
+1- Altas de nuevos empleados
+2- Modificar empleados
+3- Eliminar empleados
+4- Informes
+5- Salir
+************************************
+Ingrese una opcion: 
+5
+************ FIN EMPRESA ************

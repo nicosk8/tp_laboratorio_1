@@ -40,6 +40,11 @@
 #define LAST_NAME 2
 #define SECTOR 3
 #define SALARY 4
+#define ORDER_DOWN 0
+#define ORDER_UP 1
+#define SHOW_ORDERED 1
+#define SHOW_AVERAGE 2
+
 // others
 #define  RETRIES      			3
 #endif /* DEFINES_H_ */

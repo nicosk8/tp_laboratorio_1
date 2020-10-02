@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include "Defines.h"
 #include "Employees.h"
+#include "utn.h"
+#include "Reports.h"
 
 int main(void) {
 	setbuf(stdout, NULL);
@@ -22,7 +24,7 @@ int main(void) {
 
 	initEmployees(listEmployees,QTY_EMPLOYEES);
 
-	while(printOptionMenu(&optionUser) != ERROR){
+	while(printOptionMenu(&optionUser) != ERROR){// && optionUser != EXIT){
 	switch (optionUser)
 		{
 			case ADD:
@@ -35,11 +37,15 @@ int main(void) {
 				delete(listEmployees,QTY_EMPLOYEES);
 				break;
 			case SHOW:
-				printEmployees(listEmployees,QTY_EMPLOYEES);
+				showReports(listEmployees,QTY_EMPLOYEES);
 				break;
-			case EXIT: printf("Usted salió");
-					   break;
-			default: printf("Usted ingresó una opción inválida, reintente.\n");
+			case EXIT:
+				printf("************ FIN EMPRESA ************\n");
+				exit(0);
+				break;
+			default:
+				printf("Usted ingresó una opción inválida, reintente.\n");
+				break;
 		}
 	}
 	return 0;
